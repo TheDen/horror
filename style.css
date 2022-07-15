@@ -3,13 +3,23 @@
 	src: url("zodiac.ttf") format('truetype');
 }
 
+body {
+	height: 100vh;
+	width : 100vw;
+  overflow: hidden;
+}
+
 html {
 	color: #000;
 	background-color: #000;
 	font-family: "zodiac";
+	height: 100%;
+	overflow: hidden;
 }
 
 * {
+	overflow: hidden;
+	overflow-y: hidden;
 	cursor: none;
 	-webkit-touch-callout: none; /* iOS Safari */
 	-webkit-user-select: none; /* Safari */
@@ -29,6 +39,7 @@ html {
 	opacity: 0;
 	padding: 0.5em;
 	overflow: hidden;
+	overflow-y: hidden;
 }
 
 #light {
@@ -135,12 +146,10 @@ html {
 	margin-top:-250px;
 }
 
-.boo {
-}
 .show {
-  opacity: 1;
+	opacity: 1;
 }
 .hide {
-  opacity: 0;
-  transition: opacity 400ms;
+	opacity: 0;
+	transition: opacity 400ms;
 }

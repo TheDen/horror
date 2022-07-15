@@ -174,6 +174,23 @@
 			var scope2 = blotter2.forText(text2);
 			scope2.appendTo(elem2);
 		});
-
 	</script>
+	<script>
+    var body = document.querySelector("body")
+    var timeout;
+    document.ontouchmove = function(event) {
+      light = document.getElementById("light")
+      pos = light.getBoundingClientRect()
+      document.getElementById("light").style.top = event.pageY  - 50
+      document.getElementById("light").style.left = event.pageX - 50
+      body.classList.remove("blurout")
+      body.classList.add("blurin")
+      clearTimeout(timeout);
+      timeout = setTimeout(function(){
+        body.style.filter = "blur(0.8px)"
+        body.classList.remove("blurin")
+        body.classList.add("blurout")
+      }, 400);
+    }
+</script>
 </html>
