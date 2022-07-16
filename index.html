@@ -120,9 +120,9 @@
 			});
 		}
 		first();
-		sleep(20000).then(() => {
+		 window.setInterval(function () {
          first();
-		});
+		 }, 30000);
 	</script>
 	<script>
 		var timeout;
