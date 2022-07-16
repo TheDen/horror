@@ -4,8 +4,6 @@
 }
 
 body {
-	height: 100vh;
-	width : 100vw;
   overflow: hidden;
 }
 
@@ -13,12 +11,11 @@ html {
 	color: #000;
 	background-color: #000;
 	font-family: "zodiac";
-	height: 100%;
 	overflow: hidden;
 }
 
 * {
-	overflow: hidden;
+	overflow: hidden !important;
 	overflow-y: hidden;
 	cursor: none;
 	-webkit-touch-callout: none; /* iOS Safari */
@@ -28,8 +25,17 @@ html {
 	-ms-user-select: none; /* Internet Explorer/Edge */
 	user-select: none; /* Non-prefixed version, currently
 	supported by Chrome, Edge, Opera and Firefox */
+	margin: 0px;
+	border: 0px;
 }
 
+::-webkit-scrollbar{
+     opacity:0;
+     background: transparent;
+}
+::-webkit-scrollbar:hover{
+     opacity: 1;
+}
 #content {
 	position: relative;
 	z-index: 10;
